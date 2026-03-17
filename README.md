@@ -99,14 +99,17 @@ $c->{eprint_report}->{export_plugins} = [ qw(
     Export::Report::JSON
     Export::Report::SingleLineCSV
 )];
-
+```
 ---
 
 ### 5. Enable standard export plugin
 
-In: z_single_line_csv.pl:
+In `z_single_line_csv.pl`:
+```perl
 $c->{plugins}->{"Export::SingleLineCSV"}->{params}->{disable} = 0;
-
-
+```
+---
 ### 5. Reload EPrints
-epadmin reload <archive_id>
+- `epadmin reload <archive_id>`
+
+---
