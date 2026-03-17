@@ -113,3 +113,34 @@ $c->{plugins}->{"Export::SingleLineCSV"}->{params}->{disable} = 0;
 - `epadmin reload <archive_id>`
 
 ---
+
+## 📍 Where it appears
+
+### Standard Export
+Available in:
+- Search result export
+- Browse result export
+- Individual record export
+
+---
+
+### Reports
+Available in:
+- Admin → Reports
+
+---
+
+## 🧠 Notes
+
+The report plugin is a wrapper. It delegates export logic to the core plugin:
+
+- `Export::Report::SingleLineCSV` → wrapper
+- `Export::SingleLineCSV` → core exporter
+
+This ensures consistent CSV output across the system.
+
+---
+
+## 👨‍💻 Author
+
+Abid Fakhre Alam
