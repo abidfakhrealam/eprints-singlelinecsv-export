@@ -109,7 +109,7 @@ In `z_single_line_csv.pl`:
 $c->{plugins}->{"Export::SingleLineCSV"}->{params}->{disable} = 0;
 ```
 ---
-### 5. Reload EPrints
+### 6. Reload EPrints
 - `epadmin reload <archive_id>`
 
 ---
