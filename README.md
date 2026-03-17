@@ -91,7 +91,7 @@ Ensure the following line exists in `z_reports.pl`:
 ```perl
 $c->{plugins}{"Export::Report::SingleLineCSV"}{params}{disable} = 0;
 
-Also add it to export plugins:
+Also add it to export plugins above this line $c->{datasets}->{user}->{search}->{user_report} = $c->{search}->{user}; :
 
 $c->{eprint_report}->{export_plugins} = [ qw(
     Export::Report::CSV
@@ -99,6 +99,15 @@ $c->{eprint_report}->{export_plugins} = [ qw(
     Export::Report::JSON
     Export::Report::SingleLineCSV
 )];
+
+and also add it to the export plugin above to this line in the last of the file push @{$c->{user_roles}->{admin}}, qw{ ... :
+
+$c->{user_report}->{export_plugins} = [ qw(
+    Export::Report::CSV
+    Export::Report::HTML
+    Export::Report::JSON
+    Export::Report::SingleLineCSV )];
+
 ```
 ---
 
